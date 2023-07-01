@@ -1,14 +1,15 @@
-// var x = 20;
-// var y = 30;
+function encrypt(message){
+    let encryptedMessage = '';
+    for(let i=0; i<message.length; i++){
+        const char = message[i];
+        const charNum = char.charCodeAt(0);
+        const charAdd = charNum + 1;
+        const character = String.fromCharCode(charAdd)
+        encryptedMessage += character;
+    }
+    return encryptedMessage;
+}
 
-// var z = x + y;
-
-// console.log(z)
-
-
+let message = 'hi there just checking the cipher'
 const fs = require('fs');
-console.log('learning'+'node');
-
-let string = 'learning nodess';
-
-fs.writeFileSync('hello.txt',string,{encoding:'utf8'});
+fs.writeFileSync('hello.txt',encrypt(message))
