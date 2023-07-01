@@ -20,7 +20,7 @@ function decrypt(message){
     }
     return encryptedMessage;
 }
-let message = __dirname;
-const fs = require('fs');
-fs.writeFileSync('encrypted.txt',encrypt(message))
-fs.writeFileSync('decrypted.txt',decrypt(encrypt(message)))
+let message = __filename;
+const fs = require('fs').writeFileSync;
+fs('encrypted.txt',encrypt(message))
+fs('decrypted.txt',decrypt(encrypt(message)))
