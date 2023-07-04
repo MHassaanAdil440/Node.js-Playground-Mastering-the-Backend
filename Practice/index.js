@@ -5,10 +5,11 @@
 // console.log(sum(1, 2));
 
 
-function trying(add){
-  console.log(add(1,2));
-}
+// function trying(add){
+//   console.log(add(1,2));
+// }
 
-trying((a,b)=>{
-  return a+b;
-})
+// trying((a,b)=>{
+//   return a+b;
+// })
+
